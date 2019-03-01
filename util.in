@@ -1,0 +1,7 @@
+;;; Seed random
+(setf *random-state* (make-random-state t))
+
+;;; Helper Functions to be shared across files
+(defun mappend (fn the-list)
+	"Apply the function fn to each element of the list."
+	(apply #'append (mapcar fn the-list)))
